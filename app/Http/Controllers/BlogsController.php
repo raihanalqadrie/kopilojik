@@ -41,7 +41,7 @@ class BlogsController extends Controller
         ]);
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('blogs'), $imageName);
+        $image->move(public_path('storage/'), $imageName);
         $validatedData['image'] = $imageName;
         $validatedData['users_id'] = auth()->user()->id;
         $validatedData['slug'] = Str::slug($validatedData['title']);
@@ -66,7 +66,7 @@ class BlogsController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('blogs'), $imageName);
+            $image->move(public_path('storage/'), $imageName);
             $validatedData['image'] = $imageName;
         }
         $validatedData['slug'] = Str::slug($validatedData['title']);

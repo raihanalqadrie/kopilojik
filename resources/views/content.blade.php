@@ -5,7 +5,7 @@
     <div class="container-fluid py-5">
         <div class="container">
             <div class="card shadow-sm p-3 mb-3 rounded equal-height-card">
-                <img src="{{ $blog ? asset('blogs/' . $blog->image) : 'placeholder-image.jpg' }}"
+                <img src="{{ $blog ? asset('storage/' . $blog->image) : 'placeholder-image.jpg' }}"
                      alt="Blog Image" class="img-fluid rounded" style="object-fit: cover; max-height: 365px">
                 <div class="card-body">
                     @if ($blog)

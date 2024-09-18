@@ -33,7 +33,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td><img style="width: 80px" class="imageimg-thumbnail"
-                                            src="{{ asset('product/' . $product->picture) }}" alt=""></td>
+                                            src="{{ asset('storage/' . $product->picture) }}" alt=""></td>
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->description }}</td>
                                     <td>@formatRupiah($product->price)</td>
@@ -57,7 +57,7 @@
                                                     aria-hidden="true">&times;</button>
                                             </div>
                                             <form action="{{ route('products.update', ['id' => $product->id]) }}"
-                                                method="post">
+                                                method="post" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="modal-body">
                                                     <input type="hidden" name="id" value="{{ $product->id }}">
@@ -74,7 +74,8 @@
                                                     <div class="mb-3">
                                                         <label for="editPrice" class="form-label">Harga</label>
                                                         <input type="text" id="editPrice" name="editPrice"
-                                                            class="form-control price-input" value="{{ $product->price }}" required>
+                                                            class="form-control price-input" value="{{ $product->price }}"
+                                                            required>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="picture" class="form-label">Gambar</label>
@@ -174,7 +175,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="picture" class="form-label">Gambar</label>
-                            <input type="file" name="picture" class="form-control" required>
+                            <input type="file" name="picture" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="categorys_id" class="form-label">Category</label>

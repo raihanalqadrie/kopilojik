@@ -80,9 +80,9 @@
                                         </div>
                                         <button class="btn btn-primary btn-user btn-block" type="submit">Login</button>
                                     </form>
-                                    <small class="d-block text-center mt-3">Belum Registrasi ? <a
+                                    {{-- <small class="d-block text-center mt-3">Belum Registrasi ? <a
                                             style="text-decoration: none" href="/register">Registrasi
-                                            Sekarang!</a></small>
+                                            Sekarang!</a></small> --}}
                                 </div>
                             </div>
                         </div>

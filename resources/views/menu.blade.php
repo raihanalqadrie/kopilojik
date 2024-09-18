@@ -42,7 +42,7 @@
                                 <div class="row align-items-center mb-5">
                                     <div class="col-4 col-sm-3">
                                         <img class="w-100 rounded-circle mb-3 mb-sm-0"
-                                            src="{{ asset('product/' . $product->picture) }}" alt="{{ $product->name }}">
+                                            src="{{ asset('storage/' . $product->picture) }}" alt="{{ $product->name }}">
                                         <h5 class="menu-price">@formatHarga($product->price)</h5>
                                     </div>
                                     <div class="col-8 col-sm-9">

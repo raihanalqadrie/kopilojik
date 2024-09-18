@@ -80,7 +80,7 @@
                         <div class="row align-items-center mb-5">
                             <div class="col-4 col-sm-3">
                                 <img class="w-100 rounded-circle mb-3 mb-sm-0"
-                                    src="{{ asset('product/' . $product->picture) }}" alt="{{ $product->name }}">
+                                    src="{{ asset('storage/' . $product->picture) }}" alt="{{ $product->name }}">
                                 <h5 class="menu-price">@formatHarga($product->price)</h5>
                             </div>
                             <div class="col-8 col-sm-9">
@@ -110,7 +110,7 @@
                                 <h4 class="mb-3">{{ $item->title }}</h4>
                                 <div class="d-flex align-items-center">
                                     <img class="rounded" style="width: 100%; max-height: 200px; object-fit: cover;"
-                                        src="{{ asset('blogs/' . $item->image) }}" alt="">
+                                        src="{{ asset('storage/public/' . $item->image) }}" alt="">
                                 </div>
                             </a>
                             <p class="mt-4 small"><i class="fa fa-calendar"></i>
